@@ -1,0 +1,333 @@
+@font-face {
+  font-family: "Luchador";
+  src: url(./fonts/Luchador-Regular.ttf);
+}
+@font-face {
+  font-family: "Luchador-Lines";
+  src: url(./fonts/Luchador-Lines.ttf);
+}
+@font-face {
+  font-family: "Gunnar";
+  src: url(./fonts/Gunnar-Regular.ttf);
+}
+
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+
+$mainColor: #212121;
+$secondaryColor: #e91745;
+$nearWhite: #b6b6b6;
+$mainColorTransparent: rgba($mainColor, 0);
+$secondaryColorTransparent: rgba($secondaryColor, 0);
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: content-box;
+  background-color: $mainColor;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-color: $mainColor;
+
+  font-family: "Luchador", serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media only screen and (max-width: 768px) {
+    height: 90vh;
+  }
+  nav {
+    width: 100%;
+    height: 10vh;
+    padding: 2rem;
+
+    ul {
+      width: 80%;
+      margin: auto;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0;
+
+      li {
+        margin: 0 1rem;
+
+        a {
+          text-decoration: none;
+          color: rgba($secondaryColor, 0.5);
+
+          &:hover {
+            color: $secondaryColor;
+          }
+        }
+      }
+    }
+  }
+
+  .heading {
+    width: 50%;
+    padding: 3rem 2rem;
+    color: $nearWhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    h1 {
+      font-size: 6.5rem;
+      font-family: "Luchador";
+      position: relative;
+      letter-spacing: 3px;
+      text-align: center;
+      margin: 0;
+      span {
+        position: relative;
+
+        &::after {
+          content: attr(data-text);
+          position: absolute;
+          top: -4px;
+          left: 0;
+          color: $secondaryColor;
+          font-family: "Luchador-Lines";
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        font-size: 3rem;
+        margin-top: 5rem;
+      }
+    }
+    p {
+      font-size: 0.9rem;
+      color: rgba($secondaryColor, 0.7);
+      margin-bottom: 1.4rem;
+      text-align: center;
+    }
+  }
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+#guests {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $mainColor;
+  background: linear-gradient(
+      90deg,
+      transparent 10%,
+      $secondaryColor 10%,
+      rgba($secondaryColor, 0.4) 10.2%,
+      transparent 10.2%
+    ),
+    $mainColor
+      linear-gradient(
+        90deg,
+        transparent 40%,
+        rgba($nearWhite, 0.2) 40%,
+        rgba($nearWhite, 0.2) 40.1%,
+        transparent 40.1%
+      );
+      @media only screen and (max-width: 1040px) {
+        background: $mainColor;
+      }
+  ul {
+    position: relative;
+    width: 75%;
+    height: 90%;
+    padding: 0 2rem;
+    background-color: rgba($secondaryColor, 0);
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 1.5rem;
+    @media only screen and (max-width: 1040px) {
+      width: 95%;
+      padding: 0 0;
+    }
+    li {
+      h3 {
+        font-family: "Luchador-Lines", serif;
+        color: $secondaryColor;
+        position: relative;
+        cursor: pointer;
+        border-radius: 10px;
+        &:hover {
+          color: #e94c6e;
+          background-color: #e94c6e07;
+        }
+        @media only screen and (max-width: 1040px) {
+          font-size: 1rem;
+        }
+      }
+      .guestsInfo {
+        opacity: 0;
+        position: absolute;
+        width: 60vw;
+        height: 90vh;
+        margin-left: 1.5rem;
+        left: 40%;
+        top: 0;
+
+        h4 {
+          color: $nearWhite;
+          width: 50%;
+          font-family: "Luchador-Lines", serif;
+
+          @media only screen and (max-width: 1040px) {
+            font-size: 1rem;
+            width: 70%;
+          }
+        }
+        p {
+          color: $nearWhite;
+          font-family: "Gunnar", sans-serif;
+          width: 70%;
+          font-size: 1.2rem;
+          letter-spacing: 0.1rem;
+          line-height: 1.7rem;
+          @media only screen and (max-width: 1040px) {
+            font-size: 0.6rem;
+            line-height: 1.5rem;
+          }
+        }
+
+        .guestImg {
+          width: 230px;
+          height: 190px;
+          @media only screen and (max-width: 1040px) {
+            opacity: 0;
+          }
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+#tickets {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+
+  
+  .tickets-wrap {
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    h3 {
+      font-family: "Luchador", sans-serif;
+      color: $nearWhite;
+      font-size: 1.8rem;
+    }
+    .ticket {
+      width: 350px;
+      height: 200px;
+      box-shadow: 0 0 10px $secondaryColor;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background: repeating-linear-gradient(
+          0,
+          transparent 2px,
+          $mainColor 2px,
+          transparent 3px
+        ),
+        linear-gradient(
+          -90deg,
+          $mainColor 35px,
+          $nearWhite 35px,
+          $nearWhite 36px,
+          transparent 36px
+        ),
+        url("Linth.svg");
+      background-size: cover;
+
+      .ticket-body {
+        height: 40%;
+        border-top: 1px solid $nearWhite;
+        border-bottom: 1px solid $nearWhite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 15px;
+
+        h2 {
+          font-family: "Luchador", sans-serif;
+          color: $nearWhite;
+          font-size: 2.5rem;
+          position: relative;
+          
+          &::after {
+            content: attr(data-text);
+            position: absolute;
+            top: -2px;
+            left: 0;
+            color: $mainColor;
+            font-family: "Luchador-Lines";
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: url('Linth.svg');
+  background-attachment: fixed;
+
+  .footer-text {
+    width: 95%;
+    height: 60%;
+    background: $mainColor;
+    color: #fff;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    p {
+      font-family: 'Gunnar', sans-serif;
+      font-size: 1.2rem;
+      width: 90%;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

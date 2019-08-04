@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
+@font-face {
+  font-family: "Luchador";
+  src: url(./fonts/Luchador-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Luchador-Lines";
+  src: url(./fonts/Luchador-Lines.ttf);
+}
+
+@font-face {
+  font-family: "Gunnar";
+  src: url(./fonts/Gunnar-Regular.ttf);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  background-color: #212121;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-color: #212121;
+  font-family: "Luchador", serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    height: 90vh;
+  }
+}
+
+header nav {
+  width: 100%;
+  height: 10vh;
+  padding: 2rem;
+}
+
+header nav ul {
+  width: 80%;
+  margin: auto;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 1rem;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: rgba(233, 23, 69, 0.5);
+}
+
+header nav ul li a:hover {
+  color: #e91745;
+}
+
+header .heading {
+  width: 50%;
+  padding: 3rem 2rem;
+  color: #b6b6b6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .heading h1 {
+  font-size: 6.5rem;
+  font-family: "Luchador";
+  position: relative;
+  letter-spacing: 3px;
+  text-align: center;
+  margin: 0;
+}
+
+header .heading h1 span {
+  position: relative;
+}
+
+header .heading h1 span::after {
+  content: attr(data-text);
+  position: absolute;
+  top: -4px;
+  left: 0;
+  color: #e91745;
+  font-family: "Luchador-Lines";
+}
+
+@media only screen and (max-width: 768px) {
+  header .heading h1 {
+    font-size: 3rem;
+    margin-top: 5rem;
+  }
+}
+
+header .heading p {
+  font-size: 0.9rem;
+  color: rgba(233, 23, 69, 0.7);
+  margin-bottom: 1.4rem;
+  text-align: center;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+#guests {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #212121;
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, transparent), color-stop(10%, #e91745), color-stop(10.2%, rgba(233, 23, 69, 0.4)), color-stop(10.2%, transparent)), #212121 -webkit-gradient(linear, left top, right top, color-stop(40%, transparent), color-stop(40%, rgba(182, 182, 182, 0.2)), color-stop(40.1%, rgba(182, 182, 182, 0.2)), color-stop(40.1%, transparent));
+  background: linear-gradient(90deg, transparent 10%, #e91745 10%, rgba(233, 23, 69, 0.4) 10.2%, transparent 10.2%), #212121 linear-gradient(90deg, transparent 40%, rgba(182, 182, 182, 0.2) 40%, rgba(182, 182, 182, 0.2) 40.1%, transparent 40.1%);
+}
+
+@media only screen and (max-width: 1040px) {
+  #guests {
+    background: #212121;
+  }
+}
+
+#guests ul {
+  position: relative;
+  width: 75%;
+  height: 90%;
+  padding: 0 2rem;
+  background-color: rgba(233, 23, 69, 0);
+  margin: 0 auto;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 1040px) {
+  #guests ul {
+    width: 95%;
+    padding: 0 0;
+  }
+}
+
+#guests ul li h3 {
+  font-family: "Luchador-Lines", serif;
+  color: #e91745;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#guests ul li h3:hover {
+  color: #e94c6e;
+  background-color: #e94c6e07;
+}
+
+@media only screen and (max-width: 1040px) {
+  #guests ul li h3 {
+    font-size: 1rem;
+  }
+}
+
+#guests ul li .guestsInfo {
+  opacity: 0;
+  position: absolute;
+  width: 60vw;
+  height: 90vh;
+  margin-left: 1.5rem;
+  left: 40%;
+  top: 0;
+}
+
+#guests ul li .guestsInfo h4 {
+  color: #b6b6b6;
+  width: 50%;
+  font-family: "Luchador-Lines", serif;
+}
+
+@media only screen and (max-width: 1040px) {
+  #guests ul li .guestsInfo h4 {
+    font-size: 1rem;
+    width: 70%;
+  }
+}
+
+#guests ul li .guestsInfo p {
+  color: #b6b6b6;
+  font-family: "Gunnar", sans-serif;
+  width: 70%;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.7rem;
+}
+
+@media only screen and (max-width: 1040px) {
+  #guests ul li .guestsInfo p {
+    font-size: 0.6rem;
+    line-height: 1.5rem;
+  }
+}
+
+#guests ul li .guestsInfo .guestImg {
+  width: 230px;
+  height: 190px;
+}
+
+@media only screen and (max-width: 1040px) {
+  #guests ul li .guestsInfo .guestImg {
+    opacity: 0;
+  }
+}
+
+#guests ul li .guestsInfo .guestImg img {
+  width: 100%;
+}
+
+#tickets {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+}
+
+#tickets .tickets-wrap {
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#tickets .tickets-wrap h3 {
+  font-family: "Luchador", sans-serif;
+  color: #b6b6b6;
+  font-size: 1.8rem;
+}
+
+#tickets .tickets-wrap .ticket {
+  width: 350px;
+  height: 200px;
+  -webkit-box-shadow: 0 0 10px #e91745;
+          box-shadow: 0 0 10px #e91745;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: repeating-linear-gradient(0, transparent 2px, #212121 2px, transparent 3px), linear-gradient(-90deg, #212121 35px, #b6b6b6 35px, #b6b6b6 36px, transparent 36px), url("Linth.svg");
+  background-size: cover;
+}
+
+#tickets .tickets-wrap .ticket .ticket-body {
+  height: 40%;
+  border-top: 1px solid #b6b6b6;
+  border-bottom: 1px solid #b6b6b6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 15px;
+}
+
+#tickets .tickets-wrap .ticket .ticket-body h2 {
+  font-family: "Luchador", sans-serif;
+  color: #b6b6b6;
+  font-size: 2.5rem;
+  position: relative;
+}
+
+#tickets .tickets-wrap .ticket .ticket-body h2::after {
+  content: attr(data-text);
+  position: absolute;
+  top: -2px;
+  left: 0;
+  color: #212121;
+  font-family: "Luchador-Lines";
+}
+
+footer {
+  width: 100%;
+  height: 55vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background: url("Linth.svg");
+  background-attachment: fixed;
+}
+
+footer .footer-text {
+  width: 95%;
+  height: 60%;
+  background: #212121;
+  color: #fff;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-text p {
+  font-family: 'Gunnar', sans-serif;
+  font-size: 1.2rem;
+  width: 90%;
+}
+
+@media only screen and (max-width: 768px) {
+  footer .footer-text p {
+    font-size: 0.9rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
